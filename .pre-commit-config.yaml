@@ -2,7 +2,7 @@
 repos:
 
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.3.0
+      rev: v4.5.0
       hooks:
           - id: check-json
           - id: check-yaml
@@ -10,18 +10,18 @@ repos:
           - id: trailing-whitespace
 
     - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
-      rev: 0.2.2
+      rev: 0.2.3
       hooks:
           - id: yamlfmt
 
     - repo: https://github.com/psf/black
-      rev: 22.6.0
+      rev: 24.3.0
       hooks:
           - id: black
             language_version: python3 # Should be a command that runs python3.6+
 
     - repo: https://github.com/PyCQA/flake8
-      rev: 5.0.4
+      rev: 7.0.0
       hooks:
           - id: flake8
             args: [--count, --show-source, --statistics, --max-line-length=90]
@@ -30,13 +30,13 @@ repos:
             exclude: widget_bandsplot/__init__.py
 
     - repo: https://github.com/pycqa/isort
-      rev: 5.12.0
+      rev: 5.13.2
       hooks:
           - id: isort
             args: [--profile, black, --filter-files]
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.17.1
+      rev: 0.28.0
       hooks:
           - id: check-github-workflows
           - id: check-jsonschema
